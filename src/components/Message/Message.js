@@ -8,7 +8,7 @@ class Message extends React.Component {
                 At {this.props.createdAt}, {this.props.username} posted:
                 <br />
                 {this.props.text}
-        <div className="like-count">Likes: {this.props.likes.length}</div>
+                <div className="like-count">Likes: {this.props.likes.length}</div>
             </div>
         )
     }

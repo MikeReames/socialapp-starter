@@ -3,7 +3,6 @@ import QuestboardService from "../../pages/ServicePage"
 import axios from "axios"
 import {jsonHeaders, domain, handleJsonResponse} from "../../redux/actionCreators/constants/index"
 import "./TextInput.css"
-
 let url = domain + '/messages';
 const loginData = JSON.stringify(localStorage.getItem("login"));
 
@@ -11,11 +10,9 @@ class TextInput extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            text: ""
-
+            text: "",
         }
         this.client = new QuestboardService();
-        let text = this.state.text
     }
     
     
@@ -30,11 +27,9 @@ class TextInput extends React.Component {
         
         
         textInputClick = (event) => {
-            // const token = getState().auth.login.result.token;
             let url = "https://socialapp-api.herokuapp.com/messages"
             let text = this.state
             const loginData = JSON.parse(localStorage.getItem("login"));
-            console.log(this.state.text)
                 fetch(url, {
                     method: "POST",
                     headers: { Authorization: `Bearer ${loginData.result.token}`, ...jsonHeaders },
@@ -47,8 +42,8 @@ class TextInput extends React.Component {
 
         }
 
+
         render() {
-            console.log(loginData)
             return (
                     <div id="inputTextBorderBox">
                         <div id="testing1">Your Text Here</div>

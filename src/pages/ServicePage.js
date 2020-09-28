@@ -20,7 +20,11 @@ class QuestboardService {
         return this.client.get(this.url + "/auth/logout");
     }
     Users(){
-        return this.client.get(this.url + "/users");
+        return this.client
+            .get(this.url + "/users?limit=1000" )
+            .then(response => {
+                return response.data.users
+        })
     }
     NameUser() {
         return this.client.get(this.url +"/users/{username}");

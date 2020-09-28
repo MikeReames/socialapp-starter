@@ -1,0 +1,9 @@
+#AllProfilesBox {
+    height: 600px;
+    width: 20%;
+    background-color: #e0d8c0;
+    position: fixed;
+    left: 76%;
+    bottom: 19%;
+    overflow: scroll;
+}
