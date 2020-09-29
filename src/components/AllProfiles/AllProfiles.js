@@ -20,7 +20,6 @@ constructor(props){
 
     render() {
         let numberOfUsers = this.state.AllProfiles.length
-        console.log(this.state.AllProfiles)
         if (this.state.length === 0)
         return (
                 <div id="AllProfilesBox">
