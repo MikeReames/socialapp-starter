@@ -1,6 +1,6 @@
 import React from "react"
 import IndividualProfile from "../IndividualProfile/IndividualProfile"
-import QuestboardService from "../../pages/ServicePage"
+import QuestboardService from "../servicesPage/ServicePage"
 
 import "./AllProfiles.css"
 
