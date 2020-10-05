@@ -93,14 +93,8 @@ a:hover {
 } */
 
 .ant-layout-header {
-
-  /* background-image: url(./media/theQuestBoardHeader.png);
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: local; */
   background-color: #47170e;
+  min-width: 650px;
   width: 100%;
   height:max-content;
   margin: auto;

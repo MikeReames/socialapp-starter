@@ -19,16 +19,16 @@ class RegistrationForm extends React.Component {
   handleRegistration = e => {
     e.preventDefault();
     this.client.Register(this.state).then(result => {
-      window.location = "/";
       (notification.success({
         message: 'Welcome to the Campaign!',
-        description:'Redirecting to Login Page.'
+        description: 'Redirecting to Login Page.'
       }))
+      window.location = "/";
     })
-    .catch(err => notification.error({
-      message: 'You Lost Your Dice.',
-      description: JSON.stringify(err.message),
-    },))
+      .catch(err => notification.error({
+        message: 'You Lost Your Dice.',
+        description: JSON.stringify(err.message),
+      }))
   };
 
   handleChange = e => {
@@ -64,14 +64,14 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <br/>
+          <br />
           <button type="submit" disabled={loading}>
             Register
           </button>
         </form>
         <div>
-        Or <Link to="/">Login Now!</Link>
-       </div> 
+          Or <Link to="/">Login Now!</Link>
+        </div>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
       </div>
