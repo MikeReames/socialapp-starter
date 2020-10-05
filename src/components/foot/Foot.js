@@ -153,7 +153,7 @@ class Foot extends React.Component {
 
                         <img
                             className="Dev"
-                            src="https://randomuser.me/api/portraits/women/79.jpg"
+                            src="https://randomuser.me/api/portraits/men/79.jpg"
                             alt="user"
                         />
                         <h3><b>Phillip Golden</b></h3>
